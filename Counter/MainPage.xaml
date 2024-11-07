@@ -1,0 +1,30 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Counter.MainPage"
+             BackgroundColor="Black">
+
+    <StackLayout Padding="20">
+        <StackLayout VerticalOptions="Start" Spacing="10">
+            <Entry x:Name="CounterNameEntry" 
+                   Placeholder="Wprowadź nazwę licznika"
+                   VerticalOptions="Center" 
+                   TextColor="White"
+                   BackgroundColor="#333333" />
+
+            <Button Text="Dodaj licznik" 
+                    Clicked="OnAddCounterClicked"
+                    VerticalOptions="Center" 
+                    BackgroundColor="HotPink"
+                    TextColor="White" />
+        </StackLayout>
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="CountersContainer" 
+                         Padding="10"
+                         VerticalOptions="Start"
+                         HorizontalOptions="FillAndExpand">
+                <!-- Tutaj będą dodawane liczniki -->
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
